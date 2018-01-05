@@ -1,21 +1,20 @@
 harbor
 ================
 
-[![Travis-CI Build Status](https://travis-ci.org/hrbrmstr/harbor.svg?branch=master)](https://travis-ci.org/hrbrmstr/harbor)
+[![Travis-CI Build Status](https://travis-ci.org/hrbrmstr/harbor.svg?branch=master)](https://travis-ci.org/hrbrmstr/harbor) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/nuest/harbor?branch=appveyor&svg=true)](https://ci.appveyor.com/project/nuest/harbor)
 
 Tools to Manage 'Docker' Images and Containers
 
 ``` r
 library(harbor)
 
-docker_pull(image="hello-world")
+docker_pull(image = "hello-world")
 ```
 
     ## Using default tag: latest
     ## latest: Pulling from library/hello-world
-    ## 78445dd45222: Already exists
-    ## Digest: sha256:c5515758d4c5e1e838e9cd307f6c6a0d620b5e07e6f927b07d05f6d12a1ac8d7
-    ## Status: Downloaded newer image for hello-world:latest
+    ## Digest: sha256:ca0eeb6fb05351dfc8759c20733c91def84cb8007aa89a5bf606bc8b315b9fc7
+    ## Status: Image is up to date for hello-world:latest
 
 ``` r
 res <- docker_run(image = "hello-world", capture_text = TRUE)
@@ -30,6 +29,7 @@ cat(attr(res, "output"))
     ## To generate this message, Docker took the following steps:
     ##  1. The Docker client contacted the Docker daemon.
     ##  2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    ##     (amd64)
     ##  3. The Docker daemon created a new container from that image which runs the
     ##     executable that produces the output you are currently reading.
     ##  4. The Docker daemon streamed that output to the Docker client, which sent it

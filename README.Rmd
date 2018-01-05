@@ -2,7 +2,8 @@
 title: "harbor"
 output: github_document
 ---
-[![Travis-CI Build Status](https://travis-ci.org/hrbrmstr/harbor.svg?branch=master)](https://travis-ci.org/hrbrmstr/harbor)
+
+[![Travis-CI Build Status](https://travis-ci.org/hrbrmstr/harbor.svg?branch=master)](https://travis-ci.org/hrbrmstr/harbor) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/nuest/harbor?branch=appveyor&svg=true)](https://ci.appveyor.com/project/nuest/harbor)
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -13,7 +14,7 @@ Tools to Manage 'Docker' Images and Containers
 ```{r}
 library(harbor)
 
-docker_pull(image="hello-world")
+docker_pull(image = "hello-world")
 
 res <- docker_run(image = "hello-world", capture_text = TRUE)
 
