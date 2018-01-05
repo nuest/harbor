@@ -20,6 +20,16 @@ image: Visual Studio 2017 # required for Docker
 environment:
   global:
     USE_RTOOLS: true
+    WARNINGS_ARE_ERRORS: 1
+  matrix:
+  - R_VERSION: release
+    R_ARCH: x64
+  - R_VERSION: stable
+  - R_VERSION: patched
+
+matrix:
+  fast_finish: true
+
 before_build:
   - docker version
 
