@@ -5,3 +5,4 @@
 ^\.travis\.yml$
 ^zz_orig_README\.md$
 ^README\.Rmd$
+^appveyor\.yml$
