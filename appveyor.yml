@@ -17,6 +17,9 @@ cache:
 
 image: Visual Studio 2017 # required for Docker
 
+environment:
+  global:
+    USE_RTOOLS: true
 before_build:
   - docker version
 
